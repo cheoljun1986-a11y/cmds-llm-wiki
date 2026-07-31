@@ -15,7 +15,7 @@ captureMode: "mixed"
 collectionPurpose: 
 description: ""
 author:
-  - "[[{your-name}]]"
+  - "[[cheoljun1986]]"
   - "{Agent}"
 model: 
 effort: 

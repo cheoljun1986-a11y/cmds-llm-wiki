@@ -5,7 +5,7 @@ aliases:
   - Wiki Harness
 description: "Schema and harness document for the CMDS LLM Wiki vault. Defines the 3-layer architecture (Raw Sources / Wiki / Schema), ingest-query-lint operations, file conventions, and frontmatter standards. This is the single source of truth for LLM behavior in this vault."
 author:
-  - "[[{your-name}]]"
+  - "[[cheoljun1986]]"
 date created: 2026-04-10T21:30
 date modified: 2026-07-23
 tags:
@@ -105,7 +105,7 @@ Mothership 볼트가 없는 standalone 사용자는 이 표를 건너뛰어도 �
 | 4 | `@CMDS-Context` | `{your-mothership-vault-name}/CMDS.md` | WHY/WHAT — 시스템 철학·사용자 프로필 | 공개 |
 | 5 | `@CMDS-Guide` | `{your-mothership-vault-name}/🏛 CMDS Guide.md` | STANDARDS — 7 프로퍼티·템플릿·camelCase | 공개 |
 | 6 | `@CMDS-HQ` | `{your-mothership-vault-name}/🏛 CMDS Head Quarter.md` | WHERE — 87 서브카테고리 네비게이션 | 공개 |
-| 7 | `@CMDS-Brain` | `{your-mothership-vault-name}/BRAIN.md` | PERSONA — {your-name} brain profile (개인 제품 연동용) | 비공개 |
+| 7 | `@CMDS-Brain` | `{your-mothership-vault-name}/BRAIN.md` | PERSONA — cheoljun1986 brain profile (개인 제품 연동용) | 비공개 |
 | 8 | `@CMDS-BrainPrompt` | `{your-mothership-vault-name}/BRAIN_PROMPT.md` | PERSONA — Agent Rules of Engagement | 비공개 |
 | 9 | `@CMDS-DESIGN` | `{your-mothership-vault-name}/DESIGN.md` | VISUAL — v4.3 design constants · Anti-Slop · skill ↔ surface mapping | 공개 |
 
@@ -130,7 +130,7 @@ Mothership 볼트가 없는 standalone 사용자는 이 표를 건너뛰어도 �
 | 항목 | 값 |
 |------|-----|
 | 메인 볼트 경로 | `{PATH_TO_YOUR_MOTHERSHIP_VAULT}` |
-| 이 볼트 경로 | `{PATH_TO_YOUR_LLM_WIKI}` |
+| 이 볼트 경로 | `C:/Users/삼성/Documents/Obsidian Vault/cmds-llm-wiki` |
 | Cross-reference | `source-vault` 프로퍼티로 메인 볼트 노트 참조 |
 
 ---
@@ -420,7 +420,7 @@ CMDS_LLM_Wiki/
 
 에이전트가 생성·갱신하는 모든 콘텐츠 페이지(raw-source·wiki-page·research-question·query-result·synthesis·moc·inbox·paper-hub·paper-analysis) frontmatter 는 `author` 바로 뒤에 아래 2 키를 **항상** 포함한다. 목적: Claude Code·Codex·Grok 어떤 에이전트가 읽어도 "누가(role) · 어떤 모델(id) · 어떤 강도(effort)로 썼는가" 를 즉시 확인 — cross-agent provenance.
 
-- `author`: **(기존 필수)** 역할/작성자 — `Claude` / `Codex` / `Grok` / `"[[{your-name}]]"` (사람).
+- `author`: **(기존 필수)** 역할/작성자 — `Claude` / `Codex` / `Grok` / `"[[cheoljun1986]]"` (사람).
 - `model`: **(v6 신설)** 상세 모델 id. 예: `claude-opus-4-8`, `claude-sonnet-5`, `gpt-5.4-codex` (Codex), `grok-4` (Grok). 여러 모델 기여 시 list.
 - `effort`: **(v6 신설)** 작성 시점의 추론 강도·모드. `low` / `medium` / `high` / `xhigh` / `max` 또는 타 에이전트 등가. 미상은 `default`.
 
@@ -658,7 +658,7 @@ aliases:
 | 역할 | 볼트 | 경로 |
 |------|------|------|
 | Mothership | `{your-mothership-vault-name}` | `{PATH_TO_YOUR_MOTHERSHIP_VAULT}` |
-| Satellite (this) | `{your-llm-wiki}` | `{PATH_TO_YOUR_LLM_WIKI}` |
+| Satellite (this) | `{your-llm-wiki}` | `C:/Users/삼성/Documents/Obsidian Vault/cmds-llm-wiki` |
 
 ### 메인 볼트 참조하기 (위성 → 모선)
 

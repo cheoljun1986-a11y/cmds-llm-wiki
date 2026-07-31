@@ -138,7 +138,7 @@ status: active
 ### 1. 일괄 등록
 
 ```bash
-open "{PATH_TO_YOUR_LLM_WIKI}/90. Settings/Sharing/"
+open "C:/Users/삼성/Documents/Obsidian Vault/cmds-llm-wiki/90. Settings/Sharing/"
 ```
 
 Obsidian Web Clipper → **Settings** → **Templates** → **Import** → 14개 JSON 각각 선택.

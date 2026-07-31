@@ -3,30 +3,27 @@ type: core-context
 aliases:
   - User Context
   - 핵심 맥락
-description: The user's core context — identity, knowledge-collection purpose (reuse axes), and philosophy. LLM must read this BEFORE any ingest/query/lint so operations align with the user's purpose, not just structure. Fill in placeholders before using.
+description: "Core context for cheoljun1986 — identity as a data-science practitioner studying alongside work, four knowledge-reuse axes (research, coursework, projects, career), and operating directives. LLM must read this BEFORE any ingest/query/lint so operations align with purpose, not just structure."
 author:
-  - "[[{your-name}]]"
-date created: {YYYY-MM-DD}
-date modified: {YYYY-MM-DD}
+  - "[[cheoljun1986]]"
+model: claude-opus-5
+effort: high
+date created: 2026-07-31
+date modified: 2026-07-31
 tags:
   - system
   - schema
   - core-context
-source-vault: "{your-mothership-vault-name}"
 source: []
 version: "1.0"
-snapshot_date: {YYYY-MM-DD}
-status: template
+snapshot_date: 2026-07-31
+status: active
 ---
 
 # 🧭 Core Context — LLM Wiki 사용자 맥락
 
-> **템플릿 노트**입니다. 아래 placeholder 를 본인 맥락으로 채운 뒤 `status: active` 로 바꾸세요.
-> 이 노트는 LLM 이 ingest / query / lint 전에 **반드시 먼저 읽는** 사용자 맥락입니다.
-> 채우는 방법 두 가지:
-> 1. **직접 작성** — 자기소개, 목적, 철학을 아래 섹션에 직접 입력
-> 2. **기존 기록에서 추출** — 이미 블로그·노트·에세이가 있다면, LLM 에게 읽고 이 노트를 채우도록 요청
-> 3. **STT 인터뷰** — 마이크로 자기소개 녹음 → LLM 에게 정리 요청
+> 이 노트는 LLM 이 ingest / query / lint 전에 **반드시 먼저 읽는** 사용자 맥락이다.
+> 운영 모드: **Mode A (단독 운영)** — 별도 mothership 볼트를 연계하지 않는다. `mainVaultRelated` · `mainVaultCmds` 프로퍼티는 이 볼트에서 사용하지 않으며, `/ingest` 의 Step 0-a (메인 볼트 연결 검색) 는 건너뛴다.
 
 ---
 
@@ -34,19 +31,19 @@ status: template
 
 ### 기본 정체성
 
-- **이름**: `{Your Name}` (예: 홍길동 / Jane Doe)
-- **직함 / 역할**: `{your current role(s)}` (예: 연구자, 프리랜서 디자이너, 강사, PM...)
-- **전문 분야**: `{your domain(s)}` (예: AI 교육, UX 리서치, 플라이트 엔지니어링...)
-- **주 활동 영역**: `{your working domain}` (예: 대학·기업 교육, 소프트웨어 개발, 창작...)
+- **이름**: cheoljun1986
+- **직함 / 역할**: 데이터사이언스 실무자 + 학업 병행 (현업 적용과 코스워크를 동시에 진행)
+- **전문 분야**: 데이터사이언스 · 머신러닝
+- **주 활동 영역**: 실무 데이터 문제 해결 + 정규 코스워크 학습 (Computer Vision, Database, Data Intelligence, Machine Learning, Reinforcement Learning, Visualization, 알고리즘)
 
 ### 연속성 선언 (Continuity Statement)
 
-> "{현재 지식 관리 활동이 과거의 어떤 질문과 연결되는지 1~3 문장}"
+> [!question] 확인 필요 — 에이전트 초안
+> 아래 문장은 사용자가 직접 진술한 것이 아니라, 온보딩 시점의 볼트 정황(코스워크 노트 구성 + 실무 병행)에서 **에이전트가 추론한 초안**이다. 본인 문장으로 교체하는 것이 이 노트의 가장 큰 성능 개선 지점이다.
 
-**예시** (참고용):
-> "나는 원래 A를 연구하던 사람이다. 지금 B를 말할 때도 내가 보는 것은 결국 A다. C 는 A 를 더 잘 다루기 위한 도구의 진화일 뿐이다."
+> "나는 실무에서 데이터로 의사결정을 만드는 사람이다. 지금 수업에서 CV · RL · DB 를 따로 배우고 있지만 내가 보는 것은 결국 하나 — '데이터를 어떻게 신뢰 가능한 판단으로 바꾸는가' 이다. 코스워크는 그 판단의 근거를 더 깊게 만들기 위한 도구의 확장이지, 별개의 트랙이 아니다."
 
-이 선언은 LLM 이 "왜 이 사람이 이 주제를 수집하는가" 의 깊이를 이해하는 앵커가 된다.
+이 선언은 LLM 이 "왜 이 사람이 이 주제를 수집하는가" 의 깊이를 이해하는 앵커가 된다. 수정하려면 이 섹션을 직접 고치거나 `/refresh-context` 를 실행한다.
 
 ---
 
@@ -54,105 +51,76 @@ status: template
 
 **미래의 나에게 보내는 편지**: "이 소스가 아래 어느 축에 재활용될지" 를 수집 시점에 명시하지 못하면 수집하지 않는다.
 
-아래는 일반적 축 예시 — 본인 맞게 추가/삭제/재배열하세요.
+`/ingest` 는 매 수집마다 아래 축 중 하나 이상을 묻고 `collectionPurpose` 프로퍼티에 기록한다.
 
-1. **`{축 1}`**: (예) 학술 연구 / 논문 · 학위
-2. **`{축 2}`**: (예) 저술 · 출판
-3. **`{축 3}`**: (예) 강의 · 강연
-4. **`{축 4}`**: (예) 컨설팅 · 자문
-5. **`{축 5}`**: (예) 제품 · 소프트웨어 개발
-6. **`{축 6}`**: (예) 개인 에세이 · 브랜딩
-7. **`{축 7}`**: (예) 커뮤니티 · 교육 자료
+1. **학술 연구 · 논문**: 연구 질문, 논문 작성, 학위 과정 산출물. 서베이 · 선행연구 정리, 방법론 비교가 여기 붙는다.
+2. **수업 · 코스워크**: 수강 과목 학습, 과제, 시험 대비. CV · DB · DI · ML · RL · VIS · 알고리즘 등 정규 과정 소화.
+3. **프로젝트 · 구현**: 실제로 코드로 이어지는 것 — 미니프로젝트, 캡스톤, 실무 파이프라인, 재현 실험.
+4. **커리어 · 포트폴리오**: 취업 · 이직 준비, 기술 블로그, 포트폴리오로 외재화될 자료.
 
-> 축은 5~9개 권장. 너무 적으면 모든 수집이 같은 축으로 쏠리고, 너무 많으면 축 자체가 무의미해진다.
+> [!note] 축 확장 후보 (현재 비활성)
+> 키트 권장은 5~9 개 축이고 현재는 4 개다. 축이 적으면 대부분의 수집이 한두 축으로 쏠려 `collectionPurpose` 의 변별력이 떨어진다. 아래는 위 4 축에 잘 안 들어가는 자료가 반복해서 나타날 때 승격할 후보다 — 실제로 그런 자료가 3 회 이상 쌓이기 전에는 추가하지 않는다 (YAGNI).
+> - **도구 · 인프라**: MLOps, 실험 관리, 개발 환경 자체에 관한 자료
+> - **도메인 지식**: 데이터가 아니라 그 데이터가 설명하는 산업 · 분야에 관한 자료
+> - **학습 방법론 · 지식관리**: 이 볼트 운영 자체를 개선하는 메타 자료
 
 ---
 
 ## 3. What — (옵션) 개인 지식 프레임워크
 
-자체 지식 관리 프레임워크가 있다면 여기 기록. 없다면 이 섹션은 비워도 OK.
+**미작성.** 자체 지식 관리 프레임워크(지식 생애주기 단계, 카테고리 체계 등)가 정립되면 여기에 기록한다. 현재는 이 볼트의 3-Layer 구조([[CLAUDE]] 참조)를 그대로 따른다.
 
-**예시 구조**:
-- 지식 생애주기 단계 (예: Connect → Merge → Develop → Share)
-- 카테고리 체계 (예: 100 Themes / 200 Literature / ... / 900 Divisions)
-- 역할/포지션 구분
-
-**참고 사례**: [cmds-system-files](https://github.com/johnfkoo951/cmds-system-files) (Connect→Merge→Develop→Share + 100-900 9 categories)
+참고 사례: [cmds-system-files](https://github.com/johnfkoo951/cmds-system-files) — Connect → Merge → Develop → Share + 100-900 9 categories.
 
 ---
 
 ## 4. How — (옵션) 지식 시스템 철학
 
-LLM 이 정리 과정에서 따라야 할 사용자의 원칙·manifesto. 본인 에세이/블로그에서 뽑아 핵심 3~5개로 요약.
+**미작성.** LLM 이 정리 과정에서 따라야 할 개인 원칙이 정해지면 3~5 개로 요약해 기록한다. 본인 에세이 · 블로그 · 회고에서 추출하는 것이 가장 정확하다 — 해당 글이 생기면 `/refresh-context` 로 이 섹션을 채울 수 있다.
 
-**예시 (참고용 — 본인 철학으로 교체)**:
-- 스키마가 문서보다 먼저다 — Retrieval 은 구조 위에서 작동한다
-- Harness 설계가 경쟁력이다 — 모델보다 harness 에 투자
-- 암묵지 외재화가 AI-Ready 볼트의 본질이다 — 정리 도구가 아닌 창조 인프라
-- 행동 의도를 설계하는 시스템이 정보 구조보다 오래 간다
-
-각 원칙은 LLM 이 ingest 시 "이 수집이 내 철학과 어떻게 정렬되는가" 를 판단하는 기준이다.
+이 섹션이 비어 있는 동안 LLM 은 §1 연속성 선언과 §2 재활용 축만을 정렬 기준으로 사용한다.
 
 ---
 
-## 5. (옵션) Mothership 볼트 시스템 파일
-
-별도의 mothership Obsidian 볼트가 있고, 그 볼트의 system files (CLAUDE.md 등) 를 본 LLM Wiki 가 참고해야 한다면 여기 등록. 없다면 이 섹션 전체 삭제.
-
-### Dynamic References (@mention)
-
-| Alias | 경로 | 역할 |
-|-------|------|------|
-| `@MS-CLAUDE` | `{PATH_TO_MOTHERSHIP}/CLAUDE.md` | (설명) |
-| `@MS-AGENTS` | `{PATH_TO_MOTHERSHIP}/AGENTS.md` | (설명) |
-| ... | ... | ... |
-
-최신본 읽기: `Read("{PATH_TO_MOTHERSHIP}/{file}")` 또는 `mcp__qmd__query`.
-
-**Mothership pattern 참고**: [cmds-system-files](https://github.com/johnfkoo951/cmds-system-files) — multiple audience-specific system files (CLAUDE.md, AGENTS.md, CMDS.md, …) + semver changelog.
-
----
-
-## 6. Operational Directives (LLM 행동 규칙)
+## 5. Operational Directives (LLM 행동 규칙)
 
 ### Ingest 시
 
-1. `/ingest` 는 반드시 "왜 수집했는가?" 를 1회 묻는다 (미래의 나에게 보내는 편지, §2 축 참조).
-2. 사용자 답변을 받으면 (mothership 이 있다면) 유사 노트 검색하여 `mainVaultRelated` 기록.
-3. Raw Source frontmatter 에 `collectionPurpose`, `mainVaultRelated`, `mainVaultCmds` 기록.
+1. `/ingest` 는 반드시 "왜 수집했는가?" 를 1 회 묻는다 (미래의 나에게 보내는 편지, §2 축 참조).
+2. **Mode A 이므로 mothership 검색(Step 0-a) 은 건너뛴다.** `mainVaultRelated` · `mainVaultCmds` 프로퍼티는 기록하지 않는다.
+3. Raw Source frontmatter 에 `collectionPurpose` 를 기록한다.
 
 ### Query 시
 
-1. 답변이 §2 7 재활용 축 중 어느 축에 연결되는지 명시.
-2. (mothership 있다면) `→ {your-mothership}:` 참조 포함.
+1. 답변이 §2 재활용 축 중 어느 축에 연결되는지 명시한다.
+2. 인용 시 `verificationStatus` + `confidence` 를 함께 읽는다 — `verified` + `high` 면 단언, `partial` 또는 `medium` 이하면 hedge, `disputed` 면 양쪽을 명시한 뒤 답한다.
 
 ### Lint 시
 
 - Raw Source 에 `collectionPurpose` 없으면 flag.
 - Core Context `snapshot_date` 가 30 일 이상 오래되면 `/refresh-context` 추천.
+- **Mode A 이므로 `mainVaultRelated` 누락은 flag 하지 않는다.**
 
 ### 이미지 저장
 
-- 모든 이미지·첨부: `80. References/Attachments/` 일원화.
+- 모든 이미지 · 첨부: `80. References/Attachments/` 일원화.
 
 ---
 
-## 7. 채우고 나서
+## 6. 온보딩 체크리스트
 
-- [ ] §1 정체성 채움
-- [ ] §2 재활용 축 5~9개 정의
+- [x] §1 정체성 채움 (연속성 선언은 에이전트 초안 — 본인 문장으로 교체 권장)
+- [x] §2 재활용 축 정의 (4 개 활성 + 3 개 확장 후보)
 - [ ] (옵션) §3 개인 프레임워크
-- [ ] (옵션) §4 철학 3~5개
-- [ ] (옵션) §5 mothership 볼트 등록
-- [ ] frontmatter `status: template` → `status: active`
-- [ ] frontmatter `snapshot_date` 오늘 날짜
-- [ ] frontmatter `source:` 에 본인이 참고한 에세이·노트 경로 추가
-
-완료 후 첫 `/ingest` 를 실행해보세요. Core Context 가 작동하면 LLM 이 §2 축을 언급하며 목적 질문을 던집니다.
+- [ ] (옵션) §4 철학 3~5 개
+- [x] Mode A 확정 — mothership 섹션 삭제
+- [x] frontmatter `status: active`
+- [x] frontmatter `snapshot_date` 2026-07-31
+- [ ] frontmatter `source:` 에 본인이 참고한 에세이 · 노트 경로 추가
 
 ---
 
-## 8. Related
+## 7. Related
 
 - [[CLAUDE]] — LLM Wiki Schema
 - [[index]] — Master Index
@@ -161,4 +129,4 @@ LLM 이 정리 과정에서 따라야 할 사용자의 원칙·manifesto. 본인
 
 ---
 
-*템플릿 v1.0 — Karpathy LLM Wiki pattern + 미래의 나에게 보내는 편지 + CMDSPACE harness*
+*Core Context v1.0 — Karpathy LLM Wiki pattern + 미래의 나에게 보내는 편지. 온보딩 2026-07-31, Mode A (standalone).*

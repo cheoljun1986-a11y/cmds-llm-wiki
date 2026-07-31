@@ -6,7 +6,7 @@
 
 set -euo pipefail
 
-VAULT="{PATH_TO_YOUR_LLM_WIKI}"
+VAULT="C:/Users/삼성/Documents/Obsidian Vault/cmds-llm-wiki"
 LOCK="/tmp/qmd-reindex-cmds-llm-wiki.lock"
 LOG="/tmp/qmd-reindex-cmds-llm-wiki.log"
 DEBOUNCE_SEC=8
