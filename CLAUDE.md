@@ -5,7 +5,7 @@ aliases:
   - Wiki Harness
 description: "Schema and harness document for the CMDS LLM Wiki vault. Defines the 3-layer architecture (Raw Sources / Wiki / Schema), ingest-query-lint operations, file conventions, and frontmatter standards. This is the single source of truth for LLM behavior in this vault."
 author:
-  - "[[{your-name}]]"
+  - "[[cheoljun1986]]"
 date created: 2026-04-10T21:30
 date modified: 2026-07-23
 tags:
@@ -118,7 +118,7 @@ mothership 이 없다면 이 LLM Wiki 단독으로 운영한다 — Core Context
 | 항목 | 값 |
 |------|-----|
 | 메인 볼트 경로 | `{PATH_TO_YOUR_MOTHERSHIP_VAULT}` |
-| 이 볼트 경로 | `{PATH_TO_YOUR_LLM_WIKI}` |
+| 이 볼트 경로 | `C:/Users/삼성/Documents/Obsidian Vault/cmds-llm-wiki` |
 | Cross-reference | `source-vault` 프로퍼티로 메인 볼트 노트 참조 |
 
 Mothership pattern 예시: [cmds-system-files](https://github.com/johnfkoo951/cmds-system-files) (Karpathy Wiki pattern 과 분리된 PKM harness).
@@ -211,7 +211,7 @@ Mothership pattern 예시: [cmds-system-files](https://github.com/johnfkoo951/cm
 - File edits use patch-style changes; Raw Sources remain immutable except ingest/update policy.
 - qmd search (`qmd query`, `qmd vsearch`) is the preferred local retrieval fallback when MCP tools are unavailable.
 - Browser/Computer Use capture may be used for visible tab groups, but public share links, uploads, sends, and account-setting changes need action-time user confirmation.
-- Hooks: `.claude/hooks/*.sh` are wired via `.claude/settings.json` (uses `$CLAUDE_PROJECT_DIR`); `.codex/hooks/*.sh` are wired via `.codex/hooks.json` (set the `{PATH_TO_YOUR_LLM_WIKI}` placeholder to your absolute vault path). Both enforce `## Original Content` on Raw Sources and keep qmd fresh after writes.
+- Hooks: `.claude/hooks/*.sh` are wired via `.claude/settings.json` (uses `$CLAUDE_PROJECT_DIR`); `.codex/hooks/*.sh` are wired via `.codex/hooks.json` (set the `C:/Users/삼성/Documents/Obsidian Vault/cmds-llm-wiki` placeholder to your absolute vault path). Both enforce `## Original Content` on Raw Sources and keep qmd fresh after writes.
 
 ### 0. Capture Tabs / AI Research Capture (선행 조사 보존)
 
@@ -403,7 +403,7 @@ CMDS_LLM_Wiki/
 
 에이전트가 생성·갱신하는 모든 콘텐츠 페이지(raw-source·wiki-page·research-question·query-result·synthesis·moc·inbox·paper-hub·paper-analysis) frontmatter 는 `author` 바로 뒤에 아래 2 키를 **항상** 포함한다. 목적: Claude Code·Codex·Grok 어떤 에이전트가 읽어도 "누가(role) · 어떤 모델(id) · 어떤 강도(effort)로 썼는가" 를 즉시 확인 — cross-agent provenance.
 
-- `author`: **(기존 필수)** 역할/작성자 — `Claude` / `Codex` / `Grok` / `"[[{your-name}]]"` (사람).
+- `author`: **(기존 필수)** 역할/작성자 — `Claude` / `Codex` / `Grok` / `"[[cheoljun1986]]"` (사람).
 - `model`: **(v6 신설)** 상세 모델 id. 예: `claude-opus-4-8`, `claude-sonnet-5`, `gpt-5.4-codex` (Codex), `grok-4` (Grok). 여러 모델 기여 시 list.
 - `effort`: **(v6 신설)** 작성 시점의 추론 강도·모드. `low` / `medium` / `high` / `xhigh` / `max` 또는 타 에이전트 등가. 미상은 `default`.
 
@@ -641,7 +641,7 @@ aliases:
 | 역할 | 볼트 | 경로 |
 |------|------|------|
 | Mothership | `{your-mothership-vault-name}` | `{PATH_TO_YOUR_MOTHERSHIP_VAULT}` |
-| Satellite (this) | `{your-llm-wiki}` | `{PATH_TO_YOUR_LLM_WIKI}` |
+| Satellite (this) | `{your-llm-wiki}` | `C:/Users/삼성/Documents/Obsidian Vault/cmds-llm-wiki` |
 
 ### 메인 볼트 참조하기 (위성 → 모선)
 

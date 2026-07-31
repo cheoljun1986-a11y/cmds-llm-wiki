@@ -21,7 +21,7 @@ global_context: |
 
 collections:
   wiki:
-    path: {PATH_TO_YOUR_LLM_WIKI}/20. Wiki
+    path: C:/Users/삼성/Documents/Obsidian Vault/cmds-llm-wiki/20. Wiki
     pattern: "**/*.md"
     context:
       "/": "LLM-maintained wiki pages. The primary synthesized knowledge layer."
@@ -31,7 +31,7 @@ collections:
       "/24. Maps": "Map of Content (MOC) — topic-based indexes."
 
   raw_sources:
-    path: {PATH_TO_YOUR_LLM_WIKI}/10. Raw Sources
+    path: C:/Users/삼성/Documents/Obsidian Vault/cmds-llm-wiki/10. Raw Sources
     pattern: "**/*.md"
     context:
       "/": "Immutable source documents — Wiki references these via `source:` frontmatter."
@@ -42,13 +42,13 @@ collections:
       "/15. Clippings": "Short snippets and excerpts."
 
   queries:
-    path: {PATH_TO_YOUR_LLM_WIKI}/30. Queries
+    path: C:/Users/삼성/Documents/Obsidian Vault/cmds-llm-wiki/30. Queries
     pattern: "**/*.md"
     context:
       "/": "Synthesized query results — compounding wiki artifacts per Karpathy's pattern."
 
   paper_analyses:
-    path: {PATH_TO_YOUR_LLM_WIKI}/40. Paper Analyses
+    path: C:/Users/삼성/Documents/Obsidian Vault/cmds-llm-wiki/40. Paper Analyses
     pattern: "**/*.md"
     context:
       "/": "12-step paper analyses — one {citekey}/ folder per paper: hub (S00) + knowledge atoms (S02-S12) with verbatim quotes for citation and fact-checking."

@@ -4,7 +4,7 @@ aliases:
   - <% tp.file.title %>
 description: ""
 author:
-  - "[[{your-name}]]"
+  - "[[cheoljun1986]]"
 model: 
 effort: 
 date created: <% tp.date.now("YYYY-MM-DDTHH:mm") %>

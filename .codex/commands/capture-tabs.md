@@ -90,7 +90,7 @@ capture_status: "captured"
 captureMode: "mixed"
 description: "English one-sentence description of the captured research bundle."
 author:
-  - "[[{your-name}]]"
+  - "[[cheoljun1986]]"
   - Codex
 date created: YYYY-MM-DD
 date modified: YYYY-MM-DD
