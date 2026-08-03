@@ -3,10 +3,19 @@
 ._*
 
 # Obsidian — machine-local state (do NOT sync these)
+# 원칙: 캐시·창 배치 = 기기별(제외) / 설정·플러그인 = 볼트 공용(추적)
 .obsidian/workspace*
 .obsidian/cache
 .obsidian/graph.json
-.obsidian/plugins/*/data.json
+.trash/
+
+# Excalidraw 설정만 예외로 제외 — OpenAI/Anthropic API 키를 담는 필드가 있어
+# 키를 입력하는 순간 커밋에 딸려 들어간다. 다른 플러그인 data.json 은 추적한다.
+.obsidian/plugins/obsidian-excalidraw-plugin/data.json
+
+# Make.md — 자동 재생성되는 인덱스 캐시 (파일 수정마다 변경 → 기기간 충돌 유발)
+# .space/ 는 폴더 뷰 설정이므로 캐시와 달리 추적한다.
+.makemd/
 
 # Claude Code — machine-local session state
 .claude/sessions/
@@ -29,3 +38,7 @@ graphify-out/
 # Python bytecode (p7_verify.py)
 __pycache__/
 *.pyc
+
+# 대용량 첨부 원본 — 노트(13. Books/*-course-index.md)만 커밋하고 바이너리는 로컬 보관
+# SNU DS 강의자료 306개 파일 / 2.7GB (PDF·pptx·ipynb)
+80. References/Attachments/snu-ds-2026/

@@ -1,0 +1,28 @@
+# 줄바꿈 정규화 — 여러 기기 동기화의 전제조건
+#
+# 이 파일이 없으면 줄바꿈 처리가 기기별 core.autocrlf 설정에 좌우된다.
+# 한 기기가 CRLF 로 커밋하는 순간 다른 기기에서는 "파일 전체가 바뀐" 것처럼 보이고
+# 사소한 수정에도 충돌이 난다. 아래 규칙은 저장소를 항상 LF 로 유지한다.
+# (현재 저장소는 이미 LF 이므로 이 규칙을 추가해도 기존 파일 diff 는 생기지 않는다.)
+* text=auto eol=lf
+
+# 바이너리 — Git 이 줄바꿈을 변환하거나 텍스트 diff 를 시도하면 파일이 깨진다
+*.pdf   binary
+*.PDF   binary
+*.ppt   binary
+*.pptx  binary
+*.doc   binary
+*.docx  binary
+*.xls   binary
+*.xlsx  binary
+*.hwp   binary
+*.hwpx  binary
+*.key   binary
+*.zip   binary
+*.npz   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.svg   text eol=lf

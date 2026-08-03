@@ -13,7 +13,7 @@ model:
   - gpt-5.5
 effort: high
 date created: 2026-07-31
-date modified: 2026-07-31
+date modified: 2026-08-03
 tags:
   - system
   - log
@@ -103,7 +103,7 @@ status: active
 
 ## [2026-07-31] ingest | 서울대학교 데이터사이언스 코스워크 — 9개 과목 자료 묶음
 
-- Source corpus: `10. Raw Sources/17.seoul_univ_ds/`
+- Source corpus: `80. References/Attachments/snu-ds-2026/`
 - **Purpose**: 수업 · 코스워크 — 서울대학교 데이터사이언스 강의자료를 과목별 학습·복습 자산으로 컴파일
 - Mothership links: 없음 (Mode A — 단독 운영)
 - 처리 범위:
