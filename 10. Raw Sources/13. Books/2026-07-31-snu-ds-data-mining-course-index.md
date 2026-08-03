@@ -9,14 +9,14 @@ author:
 model: gpt-5.5
 effort: high
 date created: 2026-07-31
-date modified: 2026-07-31
+date modified: 2026-08-03
 date ingested: 2026-07-31
 tags:
   - raw-source
   - course-materials
   - snu-data-science
   - progressive-ingest
-source: "10. Raw Sources/17.seoul_univ_ds/Data Mining_김용대교수님-20260731T062929Z-1-001"
+source: "80. References/Attachments/snu-ds-2026/data-mining"
 category: Books
 status: stub
 collectionPurpose: "수업 · 코스워크 — 서울대학교 데이터사이언스 강의자료를 과목별 학습·복습 자산으로 컴파일"
@@ -30,7 +30,7 @@ conversionFidelity: "inventory-only"
 # 서울대 데이터사이언스 - 데이터 마이닝 — Course Source Index
 
 > [!info] Progressive ingest
->	원본 74개는 `10. Raw Sources/17.seoul_univ_ds/Data Mining_김용대교수님-20260731T062929Z-1-001`에 그대로 보존한다. 이 인덱스는 파일을 재작성하지 않고 구조와 범위만 등록한 `status: stub` 스캐폴드다.
+>	원본 74개는 `80. References/Attachments/snu-ds-2026/data-mining`에 그대로 보존한다. 이 인덱스는 파일을 재작성하지 않고 구조와 범위만 등록한 `status: stub` 스캐폴드다.
 
 ## Collection Purpose
 
@@ -38,7 +38,7 @@ conversionFidelity: "inventory-only"
 
 ## Original Content
 
-	- 원본 위치: `10. Raw Sources/17.seoul_univ_ds/Data Mining_김용대교수님-20260731T062929Z-1-001`
+	- 원본 위치: `80. References/Attachments/snu-ds-2026/data-mining`
 	- 파일 수: 74
 	- 확인된 전체 크기: 178.9 MiB
 	- 원본 형식은 PDF, notebook, slide, code, data, archive를 포함하며 이 단계에서는 내용 추출을 수행하지 않았다.

@@ -29,3 +29,7 @@ graphify-out/
 # Python bytecode (p7_verify.py)
 __pycache__/
 *.pyc
+
+# 대용량 첨부 원본 — 노트(13. Books/*-course-index.md)만 커밋하고 바이너리는 로컬 보관
+# SNU DS 강의자료 306개 파일 / 2.7GB (PDF·pptx·ipynb)
+80. References/Attachments/snu-ds-2026/
