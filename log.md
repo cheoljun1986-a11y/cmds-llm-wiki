@@ -126,3 +126,28 @@ status: active
 	- Maps (1): [[MOC-서울대학교 데이터사이언스 코스워크]]
 - Pages updated: [[index]] (Raw Sources 4→13, Wiki Pages 38→48, Guides 4→13, MOCs 4→5)
 - Stop condition: 시스템 구축까지만 수행. 강의 본문 전면 추출·요약·세부 개념 페이지 양산·qmd 임베딩 생성은 하지 않음.
+
+## [2026-07-31] query | 공정 수율 예측과 LangGraph 적용
+
+- Query result: [[2026-07-31-Q-공정-수율-예측과-LangGraph-적용]]
+- Purpose: 프로젝트 및 구현, 수업 및 코스워크, 커리어 및 포트폴리오
+- 결론: 현재 외관 이미지와 실린더 정보만으로 Wafer Yield를 예측할 수 없음. 가스 Batch·사용시간·설비/Chamber·공정 Lot·수율 결과의 Join Key가 확보되면 구조화 데이터 기반 수율 저하 위험 예측으로 전환 가능.
+- 대안: 공정 데이터 연결이 불가능하면 공급사·Batch·실린더별 입고 품질 수율 및 FAIL 위험 분석으로 범위를 조정.
+- LangGraph 역할: 예측모델이 아니라 데이터 검증, 모델 실행, 설명, 담당자 승인 Interrupt, 보고서 생성을 연결하는 상태형 오케스트레이션 계층.
+- Evidence gap: 데이터 마이닝 및 고급 LLM 위키 가이드는 `unverified scaffold`; 실제 공정 데이터 스키마와 Join 가능성은 미확인.
+
+## [2026-07-31] ingest | LangChain 홈페이지
+
+- Source: [[2026-07-31-LangChain-homepage]]
+- Origin: https://www.langchain.com/
+- **Purpose**: 수업 및 코스워크 — 현업과제에서 LangChain/LangGraph 활용 가능성 검토
+- Mothership links: 없음 (Mode A — 단독 운영)
+- Capture: 동적 홈페이지의 제품 포지셔닝 구간을 가시 텍스트로 보존. 반복 로고·이미지·폼·탐색 전용 텍스트는 제외하여 `captureFidelity: partial`로 기록.
+- Wiki pages created (10):
+	- Concepts (4): [[Agent Observability]], [[Production Trace Evaluation Loop]], [[Durable Agent Execution]], [[Agent Engineering Lifecycle]]
+	- Entities (4): [[LangChain]], [[LangGraph]], [[LangSmith]], [[Deep Agents]]
+	- Guides (1): [[Choosing LangChain Agent Frameworks]]
+	- Maps (1): [[MOC-Agent Engineering Stack]]
+- Pages updated: [[서울대 데이터사이언스 - 고급 LLM 및 RAG]], [[index]]
+- Evidence boundary: 제품 홈페이지 단일 출처이므로 모든 신규 페이지를 `explored: false`, `verificationStatus: unverified`, `single-source` 중심으로 기록. API·라이선스·보안·비용은 별도 검증 필요.
+- Coursework decision: 예측모델은 일반 Python ML로 유지하고, [[LangGraph]]는 데이터 검증·분기·사람 승인·재개를 관리하는 오케스트레이션 계층으로 제한.

@@ -40,14 +40,14 @@ status: active
 
 | Metric | Count |
 |--------|-------|
-| Raw Sources | 13 |
-| Wiki Pages | 48 |
-| — Concepts | 23 |
-| — Entities | 7 |
-| — Guides | 13 |
-| — MOCs | 5 |
+| Raw Sources | 14 |
+| Wiki Pages | 58 |
+| — Concepts | 27 |
+| — Entities | 11 |
+| — Guides | 14 |
+| — MOCs | 6 |
 | Research Questions | 0 |
-| Queries | 0 |
+| Queries | 1 |
 | Paper Analyses | 0 |
 | Inbox (미처리) | 0 |
 
@@ -57,12 +57,13 @@ status: active
 
 ## 🗂 Wiki Pages
 
-현재 네 개의 지식 클러스터가 있습니다.
+현재 다섯 개의 지식 클러스터가 있습니다.
 
 - **🛠 볼트 운영** — 키트에 동봉된 시드 페이지. Karpathy 의 LLM Wiki 원문을 ingest 한 결과로, 이 볼트의 사용법 자체를 설명하는 메타 지식층.
 - **🔍 외관 이상탐지** — 2026-07-31 첫 도메인 ingest. [[MOC-Visual Anomaly Detection]] 에서 전체 구조를 볼 수 있습니다.
 - **🕸 그래프 기반 저장소 분석** — 코드·문서·논문을 지식 그래프로 연결하는 접근과 Graphify의 연구 도구 적합성. [[MOC-Graph-Based Repository Analysis]] 에서 전체 구조를 볼 수 있습니다.
 - **🎓 서울대학교 데이터사이언스 코스워크** — 9개 과목·306개 혼합형 강의 파일의 점진형 학습 지도. [[MOC-서울대학교 데이터사이언스 코스워크]] 에서 전체 구조와 추천 학습 경로를 볼 수 있습니다.
+- **🤖 Agent Engineering** — LangChain·LangGraph·LangSmith의 역할, 관측·평가·지속 실행과 현업과제 적용. [[MOC-Agent Engineering Stack]] 에서 전체 구조를 볼 수 있습니다.
 
 ### Concepts
 
@@ -100,6 +101,13 @@ status: active
 - [[Software Architecture Community Detection]] — 그래프 커뮤니티를 잠재적 서브시스템으로 해석
 - [[Knowledge Graph Query Economy]] — 서브그래프 질의로 컨텍스트 비용을 낮춘다는 검증 대상 가설
 
+**🤖 Agent Engineering**
+
+- [[Agent Observability]] — 분기·Tool 호출·실패를 단계별 실행 Trace로 조사하는 운영 관점
+- [[Production Trace Evaluation Loop]] — 운영 실패를 테스트 사례와 사람·자동 평가로 전환하는 개선 루프
+- [[Durable Agent Execution]] — 중단·사람 입력 대기·재개를 위한 상태 및 체크포인트 패턴
+- [[Agent Engineering Lifecycle]] — 구축·관측·평가·배포·피드백을 잇는 반복 생애주기
+
 ### Entities
 
 > 사람, 조직, 제품, 모델
@@ -111,6 +119,10 @@ status: active
 - [[Memex]] — 문서 간 associative trail 을 가진 개인 지식 저장소 구상
 - [[Graphify]] — 코드·문서·논문·다이어그램을 질의 가능한 지식 그래프로 변환하는 오픈소스 도구
 - [[Tree-sitter]] — Graphify의 코드 AST·관계 추출에 사용되는 정적 분석 파서
+- [[LangChain]] — 여러 모델 제공자와 Agent를 빠르게 연결하는 시작 프레임워크
+- [[LangGraph]] — 상태·분기·승인과 낮은 수준의 제어가 필요한 Agent 오케스트레이션 프레임워크
+- [[LangSmith]] — Agent 관측·평가·배포를 묶는 엔지니어링 플랫폼
+- [[Deep Agents]] — 개방형 장기 자율 작업용으로 포지셔닝된 프레임워크
 
 ### Guides
 
@@ -129,6 +141,7 @@ status: active
 - [[서울대 데이터사이언스 - 선형대수와 최적화]] — 머신러닝 수학 기초와 선형대수·최적화 실습 지도
 - [[서울대 데이터사이언스 - 특강 모음]] — 이상탐지·암호·블록체인·양자컴퓨팅·DB 특강 지도
 - [[서울대 데이터사이언스 - 파이썬과 데이터 시각화]] — Python·NumPy·pandas·Matplotlib·Altair·Spotfire 학습 지도
+- [[Choosing LangChain Agent Frameworks]] — LangChain·LangGraph·Deep Agents를 과제 통제성과 자율성에 맞춰 선택하는 기준
 
 ### Maps (MOC)
 
@@ -139,6 +152,7 @@ status: active
 - [[MOC-LLM Wiki Guide]] — 이 볼트 사용 온보딩 가이드
 - [[MOC-Graph-Based Repository Analysis]] — Graphify·혼합 추출·그래프 검색·연구 평가 구조
 - [[MOC-서울대학교 데이터사이언스 코스워크]] — 9개 과목의 기초·모델링·생성형 AI 학습 경로
+- [[MOC-Agent Engineering Stack]] — 프레임워크 선택·관측·평가·지속 실행·현업과제 적용 지도
 
 ### Questions (RQ)
 
@@ -152,7 +166,7 @@ status: active
 
 > 질의 결과가 wiki 에 역피드백된 합성 페이지. [[Ingest-Query-Lint Cycle|Karpathy 원문 권장]]: "good answers can be filed back into the wiki as new pages."
 
-(첫 `/query` 를 실행하면 여기에 기록됩니다.)
+- [[2026-07-31-Q-공정-수율-예측과-LangGraph-적용]] — 특수가스·공정 데이터를 연결한 수율 저하 위험 예측과 LangGraph 기반 검토 워크플로 제안
 
 ---
 
@@ -168,6 +182,7 @@ status: active
 
 | Date | Source | Pages Touched |
 |------|--------|---------------|
+| 2026-07-31 | [[2026-07-31-LangChain-homepage\|LangChain 홈페이지]] | 10 신규 (Concepts 4 · Entities 4 · Guide 1 · MOC 1) · Guide 1 업데이트 |
 | 2026-07-31 | [[MOC-서울대학교 데이터사이언스 코스워크\|서울대학교 데이터사이언스 코스워크]] | Raw index 9 · Guide 9 · MOC 1 |
 | 2026-07-31 | [[2026-07-31-Graphify-Korean-Homepage\|Graphify 한국어 홈페이지]] | 10 신규 (Concepts 6 · Entities 2 · Guide 1 · MOC 1) |
 | 2026-07-31 | [[2026-07-31-PatchCore-반도체-특수가스-용기-표면-이상탐지-제안서\|현업과제 제안서 — PatchCore 표면 이상탐지]] | 12 신규 (Concepts 8 · Entities 2 · Guide 1 · MOC 1) |

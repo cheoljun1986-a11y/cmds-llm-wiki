@@ -17,8 +17,10 @@ tags:
   - coursework
 source:
   - "[[2026-07-31-snu-ds-advanced-llms-rag-course-index]]"
+  - "[[2026-07-31-LangChain-homepage]]"
 related:
   - "[[MOC-서울대학교 데이터사이언스 코스워크]]"
+  - "[[MOC-Agent Engineering Stack]]"
 confidence: medium
 layer: guides
 explored: false
@@ -63,3 +65,5 @@ disputed: false
 
 	- [[MOC-서울대학교 데이터사이언스 코스워크]]
 	- [[2026-07-31-snu-ds-advanced-llms-rag-course-index]]
+	- [[MOC-Agent Engineering Stack]]
+	- [[Choosing LangChain Agent Frameworks]]
