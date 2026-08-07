@@ -44,7 +44,6 @@
     "//10. Raw Sources/10. Raw Sources/14. Transcripts",
     "//10. Raw Sources/10. Raw Sources/12. Papers",
     "//20. Wiki/20. Wiki/25. Questions",
-    "//00. Inbox/00. Inbox/05. AI Research",
     "//00. Inbox/00. Inbox/04. Clippings",
     "//00. Inbox/00. Inbox/02. Papers",
     "//00. Inbox/00. Inbox/01. Articles",
@@ -55,7 +54,9 @@
     "//10. Raw Sources",
     "//00. Inbox",
     "//00. Inbox/00. Inbox/03. Transcripts",
-    "//20. Wiki"
+    "//20. Wiki",
+    "//00. Inbox/00. Inbox/05. AI Research",
+    "//00. Inbox/00. Inbox/07. Lecture"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
